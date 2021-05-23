@@ -15,10 +15,22 @@
 
     <dependencies>
         <dependency>
+            <groupId>rome</groupId>
+            <artifactId>rome</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
             <version>4.2.1_253</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-customsearch</artifactId>
+            <version>v1-rev57-1.23.0</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>
@@ -28,5 +40,6 @@
             <url>https://m2.dv8tion.net/releases</url>
         </repository>
     </repositories>
+
 
 </project>
