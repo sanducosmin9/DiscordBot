@@ -30,7 +30,13 @@
             <artifactId>google-api-services-customsearch</artifactId>
             <version>v1-rev57-1.23.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.jagrosh</groupId>
+            <artifactId>jda-utilities</artifactId>
+            <version>3.0.2</version>
+            <scope>compile</scope>
+            <type>pom</type>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -38,6 +44,11 @@
             <id>dv8tion</id>
             <name>m2-dv8tion</name>
             <url>https://m2.dv8tion.net/releases</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>bintray</name>
+            <url>http://jcenter.bintray.com</url>
         </repository>
     </repositories>
 
