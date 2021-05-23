@@ -17,6 +17,7 @@ public class Hello extends Command {
 
     @Override
     protected void execute(CommandEvent commandEvent) {
+        commandEvent.getGuild().loadMembers();
         String nickname = commandEvent.getMember().getUser().getName();
 
         commandEvent.getChannel().sendMessage("Hello, " + nickname).queue();

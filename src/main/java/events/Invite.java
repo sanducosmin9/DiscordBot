@@ -1,4 +1,4 @@
-package commands;
+package events;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
@@ -13,9 +13,8 @@ public class Invite extends ListenerAdapter {
     public void onGuildMessageReceived(@NotNull GuildMessageReceivedEvent event) {
         String messageSent = event.getMessage().getContentRaw();
 
-        if(messageSent.startsWith("!pa invite")){
-            String name = event.getMember().getEffectiveName();
-            int expireTime = 360;
+        if(messageSent.startsWith("!invite")){
+            int expireTime = 300;
 
             event.getChannel().sendMessage("Here you go " + event.getChannel().createInvite().setMaxAge(expireTime).complete().getUrl()).queue();
             event.getChannel().sendMessage("The invite expires in " + expireTime/60 + " minute(s)").queue();

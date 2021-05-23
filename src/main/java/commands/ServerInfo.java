@@ -10,6 +10,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class ServerInfo extends Command {
 
@@ -39,5 +40,6 @@ public class ServerInfo extends Command {
         eb.setFooter("Member count: " + members.size());
 
         commandEvent.getChannel().sendMessage(eb.build()).queue();
+
     }
 }

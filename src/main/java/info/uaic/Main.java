@@ -2,16 +2,14 @@ package info.uaic;
 
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
-import commands.Hello;
-import commands.ServerInfo;
-import commands.StackSearching;
-import commands.WikiSearching;
+import commands.*;
 import events.*;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
+import org.apache.commons.collections4.sequence.DeleteCommand;
 
 public class Main {
 
@@ -27,6 +25,7 @@ public class Main {
                 .build();
 
         jda.addEventListener(new Welcome());
+        jda.addEventListener(new Invite());
 
         CommandClientBuilder builder = new CommandClientBuilder();
         builder.setOwnerId("845567404050481152");
@@ -34,8 +33,11 @@ public class Main {
         builder.setHelpWord("helpme");
         builder.addCommand(new ServerInfo())
                 .addCommand(new StackSearching())
-                .addCommand(new WikiSearching()).
-                addCommand(new Hello());
+                .addCommand(new WikiSearching())
+                .addCommand(new Hello())
+                .addCommand(new Purge());
+
+
 
         CommandClient client = builder.build();
 
