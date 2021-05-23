@@ -2,18 +2,16 @@ package info.uaic;
 
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
+import commands.Hello;
 import commands.ServerInfo;
+import commands.StackSearching;
+import commands.WikiSearching;
 import events.*;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
-
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package events;
+package commands;
 
 import com.google.api.services.customsearch.model.Result;
 import com.jagrosh.jdautilities.command.Command;
